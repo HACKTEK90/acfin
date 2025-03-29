@@ -11,18 +11,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="iframeContainer"></div>
-    <script>
-        function loadIframe() {
-            var parts = ["aHR0cHM6Ly9hYy1maW53aXNlLnZlcmNlbC5hcHAv", "dXNlbGVzc2tleXMhQCMkKiwuLi8="];
-            var iframe = document.createElement("iframe");
-            iframe.src = atob(parts[0]);  
-            iframe.setAttribute("scrolling", "yes");
-            iframe.setAttribute("loading", "lazy");
-            document.getElementById("iframeContainer").appendChild(iframe);
-        }
-        
-        loadIframe();
-    </script>
+    <div id="iframeContainer">
+        <iframe src="https://ac-finwise.vercel.app/" scrolling="yes" loading="lazy"></iframe>
+    </div>
 </body>
 </html>
