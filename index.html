@@ -11,7 +11,18 @@
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="styles.css"> 
 </head>
-<body>
+<body>  <div id="copyrightDialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+    <div id="dialogContent">
+      <p id="dialogTitle">
+        This website and its content are solely created by me with original creativity.<br>
+        No copyright, trademark, or intellectual property from others is intended . You can contact later .
+      </p>
+      <label class="checkbox-label" for="acknowledgeCheckbox">
+        <input type="checkbox" id="acknowledgeCheckbox" />
+        I agree and acknowledge this statement.
+      </label>
+    </div>
+  </div>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
