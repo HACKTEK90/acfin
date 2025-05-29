@@ -10,3 +10,25 @@
     document.getElementById("iframeContainer").appendChild(iframe);
 })();
 
+
+
+const dialog = document.getElementById('copyrightDialog');
+const checkbox = document.getElementById('acknowledgeCheckbox');
+
+checkbox.addEventListener('change', () => {
+  if (checkbox.checked) {
+    // Fade out smoothly then hide
+    dialog.classList.add('fade-out');
+    setTimeout(() => {
+      dialog.style.display = 'none';
+    }, 400);
+  }
+});
+
+// Show dialog on any tap/click if not acknowledged
+document.addEventListener('click', () => {
+  if (!checkbox.checked) {
+    dialog.style.display = 'flex';
+    dialog.classList.remove('fade-out');
+  }
+});
