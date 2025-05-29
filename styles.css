@@ -15,3 +15,64 @@ html, body {
     width: 100vw;
     height: 100vh;
 }
+#copyrightDialog {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#dialogContent {
+  background: #ffffff;
+  max-width: 420px;
+  width: 90%;
+  padding: 30px 30px 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  text-align: center;
+  color: #333;
+  user-select: none;
+}
+
+#dialogContent p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+label.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #0053ba;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Smooth fade in/out animation */
+#copyrightDialog.fade-out {
+  animation: fadeOut 0.4s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
