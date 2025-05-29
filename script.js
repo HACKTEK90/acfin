@@ -32,3 +32,18 @@ document.addEventListener('click', () => {
     dialog.classList.remove('fade-out');
   }
 });
+
+
+
+
+
+
+
+document.addEventListener("click", function (e) {
+  const target = e.target.closest("a");
+  if (target && target.href.includes("tax-calculator")) {
+    e.preventDefault();
+    alert("This link is blocked .");
+  }
+});
+
