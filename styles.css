@@ -95,6 +95,7 @@ input[type="checkbox"] {
 }
 
 .sticky-note {
+     font-family: 'Gloria Hallelujah', cursive;
       width: 250px;
       min-height: 250px;
       background: linear-gradient(135deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%);
