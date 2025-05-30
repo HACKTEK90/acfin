@@ -88,4 +88,117 @@ input[type="checkbox"] {
   left: -9999px;
   top: -9999px;
 }
+:root {
+  --fab-color: #0d6efd;
+  --toolbar-bg: #1e1e2f;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Container */
+.fab-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+}
+
+/* FAB Button */
+.fab-main {
+  width: 60px;
+  height: 60px;
+  background: var(--fab-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.fab-main:hover {
+  background: #0b5ed7;
+}
+
+/* Plus to X icon fix */
+.plus-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: white;
+  top: 50%;
+  left: 0;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* Horizontal line */
+.plus-icon::before {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* Vertical line */
+.plus-icon::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* When open: transform to X */
+.fab-container.open .plus-icon::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.fab-container.open .plus-icon::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+
+/* Toolbar */
+.tool-bar {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: var(--toolbar-bg);
+  border-radius: 16px;
+  padding: 12px 16px;
+  display: flex;
+  gap: 24px;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.fab-container.open .tool-bar {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* Tool buttons */
+.tool-btn {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  background: transparent;
+  padding: 8px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.tool-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
