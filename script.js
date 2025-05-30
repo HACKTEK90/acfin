@@ -48,10 +48,3 @@ document.addEventListener("click", function (e) {
 });
 
 
-const fabToggle = document.getElementById('fabToggle');
-const fabContainer = document.querySelector('.fab-container');
-
-fabToggle.addEventListener('click', () => {
-  fabContainer.classList.toggle('open');
-});
-
